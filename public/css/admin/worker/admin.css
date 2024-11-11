@@ -1,0 +1,24 @@
+/* Default styles for sidebar */
+#sidebar {
+    transform: translateX(-100%); /* Initially hide the sidebar off-screen */
+    transition: transform 0.3s ease; /* Transition effect for sliding */
+}
+
+/* Styles when sidebar is active */
+#sidebar.sidebar-active {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Media query for mobile */
+@media (max-width: 760px) {
+    #sidebar {
+        display: block; /* Allow display block to make transition work */
+        /* Keep the sidebar hidden initially */
+        opacity: 0;
+        visibility: hidden;
+    }
+    #sidebar.sidebar-active {
+        opacity: 1; /* Make visible */
+        visibility: visible; /* Make it visible */
+    }
+}

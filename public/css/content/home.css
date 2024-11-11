@@ -1,0 +1,98 @@
+.bus-image {
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* CSS untuk Container */
+.bus-container {
+    width: 100%; 
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Menghindari elemen keluar dari container */
+}
+
+/* CSS untuk Search Bar */
+.search-bar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row; /* Tata letak horizontal */
+    align-items: center;
+    flex-wrap: wrap; /* Menghindari elemen overflow */
+}
+
+.search-bar input, .search-bar button {
+    margin: 5px;
+    padding: 10px;
+   
+
+}
+
+.search-bar input {
+    border:  none;
+    border-radius: 3px;
+    flex: 1 1 auto; 
+    width: 120px;
+}
+
+.search-bar button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    width: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.input-with-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.input-with-icon input {
+    padding-right: 30px; /* Memberi ruang untuk ikon di sebelah kanan */
+   
+}
+
+.input-with-icon .input-arrow {
+    position: absolute;
+    right: 10px; /* Posisi ikon di sebelah kanan */
+    pointer-events: none; /* Agar ikon tidak dapat diklik */
+    color: #000000;
+    font-size: 20px;
+}
+.container {
+   margin-top: 30px;
+   margin-left: 0px;
+   padding-left: 0px;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 500px) {
+    .search-bar {
+        width: 90%; /* Pertahankan lebar 90% tapi jangan ubah tata letak menjadi kolom */
+    }
+
+    .search-bar input, .search-bar button {
+        width: auto; /* Elemen tetap fleksibel tapi tidak memenuhi lebar penuh */
+    }
+
+    .bus-image {
+        width: 100vw; /* Pastikan gambar tetap memenuhi lebar layar */
+        height: auto; /* Jaga proporsi gambar */
+    }
+}

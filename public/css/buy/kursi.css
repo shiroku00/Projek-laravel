@@ -1,0 +1,54 @@
+.seat {
+    background-color: #ccc; /* Default color for unselected seats */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.seat-selected {
+    background-color: #10b951; /* Green color for selected seats */
+}
+
+.seat-occupied {
+    background-color: #fd3a3a; /* Red color for occupied seats */
+}
+ .form-background {
+    background: linear-gradient(to bottom, #FF6F61, #99433A);
+
+ 
+ }
+#submit-button {
+    /* Custom styling for the submit button */
+    background-color: #f87171; /* Red */
+    color: white; /* White text */
+    padding: 0.5rem; /* Padding for button */
+    border-radius: 0.25rem; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+@media (max-width: 768px) {
+    #seat-map {
+        grid-template-columns: repeat(2, 1fr); /* 2 seats per row */
+    }
+
+    .flex {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    #passenger-form {
+        width: 90%; /* Allow some padding */
+        margin: 0 auto; /* Center the form */
+    }
+
+    .form-background {
+        max-width: 400px; /* Limit the width of the form */
+    }
+}
+
+@media (min-width: 769px) {
+    #seat-map {
+        grid-template-columns: repeat(4, 1fr); /* 4 seats per row */
+    }
+
+    .form-background {
+        width: 400px; /* Set a fixed width for larger screens */
+    }
+}

@@ -1,0 +1,111 @@
+/* Styling Navbar */
+/* Gunakan font yang diimpor */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #EDEDED;
+}
+
+.navbar {
+    background: linear-gradient(to right, #FF6F61, #99433A);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-weight: 600; 
+    color: #fff; /* Warna font yang lebih kontras */
+    font-size: 28px; /* Ukuran font yang lebih besar */
+    transition: 0.3s color;
+}
+
+.login-button {
+    background: #FF6F61;
+    color: #fff; /* Mengubah warna teks untuk kontras */
+    font-size: 14px;
+    padding: 8px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    font-weight: 500; /* Menambah ketebalan font */
+}
+
+.login-button:hover {
+    background-color: #CC4E42;
+}
+
+.navbar-toggler {
+    border: none;
+    font-size: 1.5rem; /* Menambah ukuran tombol */
+    color: #fff; /* Mengubah warna ikon navbar */
+}
+
+.navbar-toggler:focus, .btn-close:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link {
+    color: #ffffff; /* Mengubah warna teks */
+    font-weight: 500;
+    position: relative;
+    padding: 10px 15px; /* Menambah padding */
+    text-decoration: none; /* Menghapus garis bawah default */
+    transition: color 0.3s ease; /* Menambahkan transisi yang halus */
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #FF1700; /* Mengubah warna saat hover dan aktif */
+}
+
+.service {
+    display: flex;
+}
+
+.service-header {
+    margin-right: 40px;
+}
+
+li.service-name {
+    color: #000;
+    font-weight: 600;
+}
+
+.service-header li a {
+    color: #828282;
+    padding-bottom: 1px;
+    font-weight: 400;
+}
+
+@media (min-width: 991px) {
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: #FF1700;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before, .nav-link.active::before {
+        width: 100%;
+        visibility: visible;
+    }
+}
+
+/* Media query untuk mengubah warna nav-link menjadi hitam di bawah 900px */
+@media (max-width: 990px) {
+    .nav-link {
+        color: #000; /* Ubah warna nav-link menjadi hitam */
+        font-weight: 500;
+    position: relative;
+    padding: 10px 15px; /* Menambah padding */
+    text-decoration: none; /* Menghapus garis bawah default */
+    transition: color 0.3s ease; /* Menambahkan transisi yang halus */
+    }
+}
